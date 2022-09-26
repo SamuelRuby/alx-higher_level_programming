@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" Uses requests module -- yay"""
-import requests
-
+"""Python script that fetches https://alx-intranet.hbtn.io/status
+using requests"""
 if __name__ == "__main__":
-    response = requests.get('https://intranet.hbtn.io/status')
-    print("Body response:\n\t- type: {}\n\t- content: {}"
-          .format(type(response.text), response.text))
+    import requests
+
+    r = requests.get("https://alx-intranet.hbtn.io/status")
+    print('Body response:\n\t- type: {}\n\t- content: {}'
+          .format(type(r.text), r.text))
